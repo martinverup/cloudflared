@@ -2,6 +2,8 @@ FROM alpine:latest
 
 ENV PORT 5053
 
+ADD Dockerfile .
+
 RUN apk add --no-cache ca-certificates libc6-compat libstdc++ && \
     wget -O- https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.tgz | tar xzC /usr/local/bin
 
